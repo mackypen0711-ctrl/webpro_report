@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規登録</title>
+</head>
+<body>
+    <h1>新規キャラクター登録</h1>
+    <form action="/characters/add" method="post">
+        <div>
+            <label for="name">名前（必須）:</label><br>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="description">説明:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <label for="imageURL">画像URL:</label><br>
+            <input type="text" id="imageURL" name="imageURL" placeholder="https://example.com/image.jpg">
+        </div>
+        <br>
+        <button type="submit">送信</button>
+    </form>
+    <p><a href="/characters">キャンセル</a></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><%= data.name %>の詳細</title>
+</head>
+<body>
+    <h1><%= data.name %></h1>
+    
+    <% if (data.imageURL) { %>
+        <div>
+            <% if (data.imageURL.startsWith('http')) { %>
+                <img src="<%= data.imageURL %>" alt="<%= data.name %>" style="max-width: 300px;">
+            <% } else { %>
+                <img src="/public/images/<%= data.imageURL %>" alt="<%= data.name %>" style="max-width: 300px;">
+            <% } %>
+        </div>
+    <% } %>
+
+    <h3>説明</h3>
+    <p><%= data.description %></p>
+
+    <hr>
+    
+    <p>
+        <a href="/characters/edit/<%= data.id %>">📝 編集</a> | 
+        <a href="/characters/delete/<%= data.id %>" onclick="return confirm('本当に削除しますか？');">🗑️ 削除</a>
+    </p>
+    
+    <p><a href="/characters">🔙 一覧に戻る</a></p>
+</body>
+</html>

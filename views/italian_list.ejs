@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Italian Brainrot List</title>
+</head>
+<body>
+    <h1>イタリアンブレインロッド図鑑</h1>
+    <p><a href="/characters/add">➕ 新規キャラクター登録</a></p>
+    
+    <ul>
+        <% for (let item of data) { %>
+            <li>
+                <a href="/characters/<%= item.id %>">
+                    <%= item.name %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>
