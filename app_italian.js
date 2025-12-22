@@ -12,7 +12,7 @@ let characters = [
   { 
     id: 1, 
     name: "トゥララレロ・トゥラララ", 
-    description: "青いスニーカーを履いた3本足のサメ, トゥントゥントゥンサフールに次ぐ勢いの人気キャラクター.", 
+    description: "青いスニーカーを履いた3本足のサメ. トゥントゥントゥンサフールに次ぐ勢いの人気キャラクター.", 
     imageURL: "541623-backgroundImage1.jpg" 
   },
   { 
@@ -24,9 +24,21 @@ let characters = [
   { 
     id: 3, 
     name: "ボンバルディーロ・クロコディーロ", 
-    description: "ワニの頭を持つ巨大な爆撃機.", 
+    description: "ワニの頭を持つ巨大な爆撃機. 「Bombardiro」はイタリア語で「爆撃手」を意味し, 空から脅威をもたらす存在として描かれている.", 
     imageURL: "519410-backgroundImage1.png" 
-  }
+  },
+  { 
+    id: 4, 
+    name: "バレリーナ・カプチーナ", 
+    description: "カプチーノカップを頭に載せた優雅なバレリーナで, シュールなエレガンスとユーモアを体現している.", 
+    imageURL: "baleli-na.jpeg"
+  },
+  { 
+    id: 5, 
+    name: "リリリ・ラリラ", 
+    description: "象の顔, サボテンの体, 2本の巨大なサボテンの足, そしてサンダルを履いているイタリアンブレインロットを代表するキャラクターの１つ. シュールな巨大系キャラクターはインパクトを与える.", 
+    imageURL: "04-lirili-larila.webp"
+  },
 ];
 
 // ルート: 一覧へリダイレクト
