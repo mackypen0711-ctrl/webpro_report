@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規登録</title>
+</head>
+<body>
+    <h1>新規キャラクター登録</h1>
+    <form action="/genshin/add" method="post">
+        <div style="margin-bottom: 10px;">
+            <label>名前（必須）:</label><br>
+            <input type="text" name="name" required>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label>レアリティ:</label><br>
+            <select name="rarity">
+                <option value="5">★5</option>
+                <option value="4" selected>★4</option>
+            </select>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+            <label>元素:</label><br>
+            <select name="element">
+                <option value="炎">炎</option>
+                <option value="水">水</option>
+                <option value="風">風</option>
+                <option value="雷">雷</option>
+                <option value="草">草</option>
+                <option value="氷">氷</option>
+                <option value="岩">岩</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label>武器:</label><br>
+            <select name="weapon">
+                <option value="片手剣">片手剣</option>
+                <option value="両手剣">両手剣</option>
+                <option value="長柄武器">長柄武器</option>
+                <option value="弓">弓</option>
+                <option value="法器">法器</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label>説明:</label><br>
+            <textarea name="description" rows="4" cols="40"></textarea>
+        </div>
+
+        <button type="submit">登録</button>
+    </form>
+    <p><a href="/genshin">キャンセル</a></p>
+</body>
+</html>

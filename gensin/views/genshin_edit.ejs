@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集: <%= data.name %></title>
+</head>
+<body>
+    <h1>編集: <%= data.name %></h1>
+    <form action="/genshin/update/<%= data.id %>" method="post">
+        <div style="margin-bottom: 10px;">
+            <label>名前:</label><br>
+            <input type="text" name="name" value="<%= data.name %>" required>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label>レアリティ:</label><br>
+            <select name="rarity">
+                <option value="5" <%= data.rarity === 5 ? 'selected' : '' %>>★5</option>
+                <option value="4" <%= data.rarity === 4 ? 'selected' : '' %>>★4</option>
+            </select>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+            <label>元素:</label><br>
+            <select name="element">
+                <% const elements = ["炎", "水", "風", "雷", "草", "氷", "岩"]; %>
+                <% for(let elm of elements) { %>
+                    <option value="<%= elm %>" <%= data.element === elm ? 'selected' : '' %>><%= elm %></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label>武器:</label><br>
+            <select name="weapon">
+                <% const weapons = ["片手剣", "両手剣", "長柄武器", "弓", "法器"]; %>
+                <% for(let wp of weapons) { %>
+                    <option value="<%= wp %>" <%= data.weapon === wp ? 'selected' : '' %>><%= wp %></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label>説明:</label><br>
+            <textarea name="description" rows="4" cols="40"><%= data.description %></textarea>
+        </div>
+
+        <button type="submit">更新</button>
+    </form>
+    <p><a href="/genshin/<%= data.id %>">キャンセル</a></p>
+</body>
+</html>

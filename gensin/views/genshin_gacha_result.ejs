@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>祈願結果</title>
+</head>
+<body>
+    <h1>祈願結果</h1>
+    
+    <hr>
+
+    <h2>★<%= data.rarity %>　<%= data.name %></h2>
+    
+    <ul>
+        <li>元素: <%= data.element %></li>
+        <li>武器: <%= data.weapon %></li>
+    </ul>
+
+    <p><%= data.description %></p>
+
+    <hr>
+
+    <p>
+        <a href="/genshin/gacha">もう一度引く</a> | 
+        <a href="/genshin">一覧に戻る</a>
+    </p>
+</body>
+</html>

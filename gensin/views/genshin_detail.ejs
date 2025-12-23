@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><%= data.name %>の詳細</title>
+</head>
+<body>
+    <h1>
+        ★<%= data.rarity %>　<%= data.name %>
+    </h1>
+    
+    <ul>
+        <li><strong>元素:</strong> <%= data.element %></li>
+        <li><strong>武器:</strong> <%= data.weapon %></li>
+    </ul>
+
+    <h3>プロフィール</h3>
+    <p><%= data.description %></p>
+
+    <hr>
+    <p>
+        <a href="/genshin/edit/<%= data.id %>">📝 編集</a> | 
+        <a href="/genshin/delete/<%= data.id %>" onclick="return confirm('本当に削除しますか？');">🗑️ 削除</a>
+    </p>
+    <p><a href="/genshin">🔙 一覧に戻る</a></p>
+</body>
+</html>
