@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>妖怪ウォッチ図鑑</title>
+</head>
+<body>
+    <h1>妖怪ウォッチ図鑑</h1>
+    
+    <div style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; line-height: 1.8;">
+        <strong>種族で絞り込む:</strong><br>
+        <a href="/yokai">すべて表示</a> | 
+        <a href="/yokai?tribe=イサマシ">イサマシ族</a> | 
+        <a href="/yokai?tribe=フシギ">フシギ族</a> | 
+        <a href="/yokai?tribe=ゴーケツ">ゴーケツ族</a> | 
+        <a href="/yokai?tribe=プリチー">プリチー族</a> | 
+        <a href="/yokai?tribe=ポカポカ">ポカポカ族</a> | 
+        <a href="/yokai?tribe=ウスラカゲ">ウスラカゲ族</a> | 
+        <a href="/yokai?tribe=ブキミー">ブキミー族</a> | 
+        <a href="/yokai?tribe=ニョロロン">ニョロロン族</a>
+    </div>
+
+    <p><a href="/yokai/add">➕ 新しい妖怪を登録</a></p>
+    
+    <h3>
+        <% if (currentTribe) { %>
+            「<%= currentTribe %>族」の一覧
+        <% } else { %>
+            全妖怪の一覧
+        <% } %>
+    </h3>
+
+    <ul>
+        <% for (let item of data) { %>
+            <li>
+                <a href="/yokai/<%= item.id %>">
+                    <%= item.name %>
+                </a>
+                （<%= item.tribe %>族）
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>

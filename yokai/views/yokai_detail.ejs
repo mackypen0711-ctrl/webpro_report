@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><%= data.name %>の詳細</title>
+</head>
+<body>
+    <h1><%= data.name %> <small>（<%= data.tribe %>族）</small></h1>
+    
+    <h3>説明</h3>
+    <p><%= data.description %></p>
+
+    <hr>
+    <p>
+        <a href="/yokai/edit/<%= data.id %>">📝 編集</a> | 
+        <a href="/yokai/delete/<%= data.id %>" onclick="return confirm('本当に削除しますか？');">🗑️ 削除</a>
+    </p>
+    <p><a href="/yokai">🔙 一覧に戻る</a></p>
+</body>
+</html>

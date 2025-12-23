@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>編集: <%= data.name %></title>
+</head>
+<body>
+    <h1>編集: <%= data.name %></h1>
+    <form action="/yokai/update/<%= data.id %>" method="post">
+        <div>
+            <label for="name">名前（必須）:</label><br>
+            <input type="text" id="name" name="name" value="<%= data.name %>" required>
+        </div>
+        <div>
+            <label for="tribe">種族:</label><br>
+            <select id="tribe" name="tribe">
+                <% 
+                const tribes = ["プリチー", "イサマシ", "フシギ", "ゴーケツ", "ポカポカ", "ウスラカゲ", "ブキミー", "ニョロロン"];
+                for(let t of tribes) { 
+                %>
+                    <option value="<%= t %>" <%= data.tribe === t ? 'selected' : '' %>><%= t %>族</option>
+                <% } %>
+            </select>
+        </div>
+        <div>
+            <label for="description">説明:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"><%= data.description %></textarea>
+        </div>
+        <br>
+        <button type="submit">更新</button>
+    </form>
+    <p><a href="/yokai/<%= data.id %>">キャンセル</a></p>
+</body>
+</html>

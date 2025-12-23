@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新規妖怪登録</title>
+</head>
+<body>
+    <h1>新規妖怪登録</h1>
+    <form action="/yokai/add" method="post">
+        <div>
+            <label for="name">名前（必須）:</label><br>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="tribe">種族:</label><br>
+            <select id="tribe" name="tribe">
+                <option value="プリチー">プリチー族</option>
+                <option value="イサマシ">イサマシ族</option>
+                <option value="フシギ">フシギ族</option>
+                <option value="ゴーケツ">ゴーケツ族</option>
+                <option value="ポカポカ">ポカポカ族</option>
+                <option value="ウスラカゲ">ウスラカゲ族</option>
+                <option value="ブキミー">ブキミー族</option>
+                <option value="ニョロロン">ニョロロン族</option>
+            </select>
+        </div>
+        <div>
+            <label for="description">説明:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea>
+        </div>
+        <br>
+        <button type="submit">登録する</button>
+    </form>
+    <p><a href="/yokai">キャンセル</a></p>
+</body>
+</html>
